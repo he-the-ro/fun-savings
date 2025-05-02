@@ -1,0 +1,101 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.welcome-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.welcome-logo {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 24px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.welcome-subtitle {
+  font-size: 16px;
+  color: #7f8c8d;
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.4;
+}
+
+.features-container {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+  width: 36px;
+  height: 36px;
+  margin-right: 15px;
+}
+
+.feature-text {
+  font-size: 16px;
+  color: #34495e;
+}
+
+.proceed-button {
+  width: 100%;
+  height: 56px;
+  background: linear-gradient(90deg,#396101  0%, #7EA842 100%);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(46, 204, 113, 0.3);
+  transition: all 0.3s ease;
+}
+
+.button-hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(46, 204, 113, 0.4);
+}
+
+.welcome-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size: 12px;
+  color: rgba(12, 12, 12, 0.7);
+}

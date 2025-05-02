@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/action/index",
+    "pages/save/index",
+    "pages/withdrawal/index"
+  ],
+  "window": {
+    "defaultTitle": "Fun Savings"
+  }
+}

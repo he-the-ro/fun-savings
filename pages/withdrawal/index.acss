@@ -1,0 +1,339 @@
+.withdrawal-page {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.back-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 15px;
+  color: #2c3e50;
+}
+
+/* Balance Card */
+.balance-card {
+  background: white;
+  border-radius: 16px;
+  margin: 0 20px 25px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.balance-label {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.balance-amount {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 8px 0 20px;
+  color: #2c3e50;
+}
+
+.progress-container {
+  height: 6px;
+  background: #f1f8e9;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: #7EA842;
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Amount Selection */
+.amount-section {
+  background: white;
+  border-radius: 16px;
+  margin: 0 20px 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.amount-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.amount-pill {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.amount-pill.active {
+  border-color: #7EA842;
+  background-color: #f1f8e9;
+  color: #7EA842;
+  font-weight: bold;
+}
+
+.custom-amount {
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.custom-amount.focused {
+  border-color: #7EA842;
+}
+
+.currency {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #2c3e50;
+}
+
+.custom-amount input {
+  flex: 1;
+  font-size: 16px;
+}
+
+/* Recipient Section */
+.recipient-section {
+  background: white;
+  border-radius: 16px;
+  margin: 0 20px 20px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.recipient-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f8f9fa;
+}
+
+.recipient-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.recipient-info {
+  flex: 1;
+}
+
+.recipient-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.recipient-detail {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.change-btn {
+  color: #7EA842;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Withdraw Button */
+.withdraw-btn {
+  margin: 30px 20px;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #7EA842;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.withdraw-btn:not(.active) {
+  background: #cccccc;
+  opacity: 0.7;
+}
+
+/* Confirmation Screen */
+.confirmation-screen {
+  padding: 20px;
+}
+
+.confirmation-header {
+  padding: 15px 0;
+}
+
+.confirmation-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.confirmation-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.method-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.confirmation-amount {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.confirmation-method {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+.confirmation-details {
+  border-top: 1px solid #f1f1f1;
+  padding-top: 20px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.detail-label {
+  color: #7f8c8d;
+}
+
+.detail-value {
+  font-weight: 500;
+}
+
+.confirmation-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cancel-btn, .confirm-btn {
+  flex: 1;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: white;
+  border: 1px solid #7EA842;
+  color: #7EA842;
+}
+
+.confirm-btn {
+  background: #7EA842;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  margin-left: 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success Screen */
+.success-screen {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.success-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.success-details {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.detail-item {
+  margin-bottom: 15px;
+}
+
+.detail-item:last-child {
+  margin-bottom: 0;
+}
+
+.done-btn {
+  background: #7EA842;
+  color: white;
+  height: 50px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+}

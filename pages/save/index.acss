@@ -1,0 +1,267 @@
+.save-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; 
+  width: 100vw; 
+  box-sizing: border-box;
+}
+
+.save-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  padding: 5px;
+}
+
+.save-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.savings-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.savings-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.savings-label {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.savings-amount {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #2c3e50;
+}
+
+.progress-container {
+  margin: 20px 0;
+  position: relative;
+}
+
+.progress-track {
+  height: 6px;
+  background: #f1f8e9;
+  border-radius: 3px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #7EA842;
+  border-radius: 3px;
+  transition: width 0.5s ease;
+}
+
+.progress-marker {
+  position: absolute;
+  top: -12px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 2px solid #7EA842;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+}
+
+.progress-percent {
+  font-size: 10px;
+  font-weight: bold;
+  color: #7EA842;
+}
+
+.savings-goal {
+  font-size: 14px;
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.save-form {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.amount-input {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  width: 90%;
+  font-size: 16px;
+  justify-content: center;
+  align-content: center;
+}
+
+.quick-select {
+  margin-bottom: 20px;
+}
+
+.quick-select-label {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.quick-amounts {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.quick-amount-btn {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  background: #f1f8e9;
+  color: #7EA842;
+}
+
+.quick-amount-btn.active {
+  background: #7EA842;
+  color: white;
+}
+
+.save-action-btn {
+  width: 100%;
+  padding: 12px;
+  background: #7EA842;
+  color: white;
+  border: none;
+  border-radius: 50px 50px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.save-action-btn[disabled] {
+  background: #cccccc;
+}
+
+.transactions-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.transaction-icon {
+  width: 24px;
+  height: 24px;
+  background: #7EA842;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-icon{
+  width: 24px;
+  height: 24px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7EA842;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  color: #7EA842;
+}
+
+.transaction-date {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.goal-withdraw-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.savings-goal {
+  font-size: 14px;
+  color: #7f8c8d;
+  flex: 1;
+}
+
+.withdraw-goal-btn {
+  background: #f8f9fa;
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+  border-radius: 15px;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.withdraw-goal-btn-hover {
+  background: #fce8e6;
+}
+
+.savings-card {
+  text-align: left;
+}

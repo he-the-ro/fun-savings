@@ -1,0 +1,135 @@
+<view class="withdrawal-page">
+  <!-- Main Withdrawal Screen -->
+  <view class="withdrawal-screen" a:if="{{!showConfirmation}}">
+    <!-- Header -->
+    <view class="header">
+      <view class="back-btn" onTap="navigateBack">
+        <image src="/images/back-icon.png" class="back-icon" />
+      </view>
+      <text class="title">Withdraw Funds</text>
+    </view>
+
+    <!-- Balance Card -->
+    <view class="balance-card">
+      <text class="balance-label">Available Balance</text>
+      <text class="balance-amount">KSH {{balance}}</text>
+      <view class="progress-container">
+        <view class="progress-bar" style="width: {{progress}}%"></view>
+      </view>
+    </view>
+
+    <!-- Amount Selection -->
+    <view class="amount-section">
+      <text class="section-title">Amount to Withdraw</text>
+      <view class="amount-grid">
+        <view 
+          a:for="{{quickAmounts}}"
+          class="amount-pill {{selectedAmount === item ? 'active' : ''}}"
+          onTap="selectAmount"
+          data-amount="{{item}}"
+        >
+          KSH {{item}}
+        </view>
+      </view>
+      <view class="custom-amount {{customAmountFocus ? 'focused' : ''}}">
+        <text class="currency">KSH</text>
+        <input 
+          type="number" 
+          placeholder="Enter other amount" 
+          value="{{customAmount}}"
+          onInput="handleCustomAmount"
+          onFocus="focusCustomAmount"
+          onBlur="blurCustomAmount"
+        />
+      </view>
+    </view>
+
+    <!-- Recipient Info -->
+    <view class="recipient-section">
+      <text class="section-title">Withdraw to</text>
+      <view class="recipient-card">
+        <image src="/images/mpesa-icon.png" class="recipient-icon" />
+        <view class="recipient-info">
+          <text class="recipient-name">M-Pesa</text>
+          <text class="recipient-detail">{{phoneNumber}}</text>
+        </view>
+        <view class="change-btn" onTap="changeRecipient">
+          <text>Change</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- Withdraw Button -->
+    <button 
+      class="withdraw-btn {{canWithdraw ? 'active' : ''}}" 
+      disabled="{{!canWithdraw}}"
+      onTap="showConfirmationScreen"
+    >
+      Continue to Withdraw
+    </button>
+  </view>
+
+  <!-- Confirmation Screen -->
+  <view class="confirmation-screen" a:if="{{showConfirmation}}">
+    <view class="confirmation-header">
+      <text class="confirmation-title">Confirm Withdrawal</text>
+    </view>
+
+    <view class="confirmation-card">
+      <image src="/images/mpesa-large.png" class="method-icon" />
+      <text class="confirmation-amount">KSH {{withdrawalAmount}}</text>
+      <text class="confirmation-method">to M-Pesa</text>
+
+      <view class="confirmation-details">
+        <view class="detail-row">
+          <text class="detail-label">Account</text>
+          <text class="detail-value">{{phoneNumber}}</text>
+        </view>
+        <view class="detail-row">
+          <text class="detail-label">Fee</text>
+          <text class="detail-value">FREE</text>
+        </view>
+        <view class="detail-row">
+          <text class="detail-label">New Balance</text>
+          <text class="detail-value">KSH {{newBalance}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="confirmation-actions">
+      <button class="cancel-btn" onTap="hideConfirmationScreen">
+        Cancel
+      </button>
+      <button class="confirm-btn" onTap="processWithdrawal">
+        <text>Confirm Withdrawal</text>
+        <view class="spinner" a:if="{{isProcessing}}"></view>
+      </button>
+    </view>
+  </view>
+
+  <!-- Success Screen -->
+  <view class="success-screen" a:if="{{showSuccess}}">
+    <image src="/images/success-check.png" class="success-icon" />
+    <text class="success-title">Withdrawal Successful!</text>
+    <text class="success-message">KSH {{withdrawalAmount}} has been sent to your M-Pesa</text>
+    
+    <view class="success-details">
+      <view class="detail-item">
+        <text class="detail-label">Transaction ID</text>
+        <text class="detail-value">MP{{transactionId}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">New Balance</text>
+        <text class="detail-value">KSH {{newBalance}}</text>
+      </view>
+      <view class="detail-item">
+        <text class="detail-label">Time</text>
+        <text class="detail-value">{{transactionTime}}</text>
+      </view>
+    </view>
+
+    <button class="done-btn" onTap="finishWithdrawal">
+      Done
+    </button>
+  </view>
+</view>

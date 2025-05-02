@@ -1,0 +1,35 @@
+<view class="action-container">
+  <view class="header">
+    <text class="action-title">What would you like to do?</text>
+  </view>
+  <view class="action-cards-container">
+    <view class="action-cards">
+      <!-- Save Card -->
+      <view class="action-card save-card" onTap="navigateToSave">
+        <view class="icon-container save-icon">
+          <icon type="upload" size="large" color="#FFFFFF" />
+        </view>
+        <text class="card-title">Save Money</text>
+        <text class="card-desc">Grow your savings securely</text>
+      </view>
+      
+      <!-- Withdraw Card -->
+      <view class="action-card withdraw-card" onTap="navigateToWithdraw">
+        <view class="icon-container withdraw-icon">
+          <icon type="download" size="large" color="#FFFFFF" />
+        </view>
+        <text class="card-title">Withdraw</text>
+        <text class="card-desc">Access your funds</text>
+      </view>
+      
+      <!-- Draw Card -->
+      <view class="action-card draw-card" onTap="navigateToDraw">
+        <view class="icon-container draw-icon">
+          <icon type="gift" size="large" color="#FFFFFF" />
+        </view>
+        <text class="card-title">Earn More</text>
+        <text class="card-desc">Enter our prize draw</text>
+      </view>
+    </view>
+  </view>
+</view>

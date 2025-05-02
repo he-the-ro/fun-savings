@@ -1,0 +1,28 @@
+<view class="welcome-container">
+  <view class="welcome-content">
+    <image class="welcome-logo" src="/assets/images/logo.png" />
+    <text class="welcome-title">Welcome to Fun Savings!</text>
+    <text class="welcome-subtitle">Game your way to financial freedom</text>
+    
+    <view class="features-container">
+      <view class="feature-item">
+        <image class="feature-icon" src="/images/piggy-icon.png" />
+        <text class="feature-text">Track Your Savings</text>
+      </view>
+      <view class="feature-item">
+        <image class="feature-icon" src="/images/coin-icon.png" />
+        <text class="feature-text">Earn Rewards Through Gaming</text>
+      </view>
+      <view class="feature-item">
+        <image class="feature-icon" src="/images/graph-icon.png" />
+        <text class="feature-text">See Your Progress</text>
+      </view>
+    </view>
+    
+    <button class="proceed-button" onTap="navigateToActions">Let's Get Started →</button>
+  </view>
+  
+  <view class="welcome-footer">
+    <text class="copyright">All Rights © {{currentYear}}</text>
+  </view>
+</view>

@@ -1,0 +1,79 @@
+<view class="save-container">
+  <view class="savings-card">
+    <view class="savings-header">
+      <text class="savings-label">Current Savings</text>
+    </view>
+    <text class="savings-amount">KSH {{currentSavings}}</text>
+    
+    <view class="progress-container">
+      <view class="progress-track">
+        <view class="progress-fill" style="width: {{progressPercent}}%"></view>
+      </view>
+      <view class="progress-marker" style="left: {{progressPercent}}%">
+        <text class="progress-percent">{{progressPercent}}%</text>
+      </view>
+    </view>
+      <text class="savings-goal">Goal: KSH {{savingsGoal}}</text>
+  </view>
+
+  <!-- Save Form -->
+  <view class="save-form">
+    <view class="input-group">
+      <text class="input-label">Amount to Save (KSH)</text>
+      <input 
+        class="amount-input" 
+        type="number" 
+        placeholder="Enter amount" 
+        value="{{saveAmount}}" 
+        onInput="handleAmountChange"
+      />
+    </view>
+
+    <view class="quick-select">
+      <text class="quick-select-label">QUICK ADD (KSH)</text>
+      <view class="quick-amounts">
+        <view 
+          class="quick-amount-btn {{saveAmount == 100 ? 'active' : ''}}" 
+          onTap="setQuickAmount" 
+          data-amount="100"
+        >100</view>
+        <view 
+          class="quick-amount-btn {{saveAmount == 500 ? 'active' : ''}}" 
+          onTap="setQuickAmount" 
+          data-amount="500"
+        >500</view>
+        <view 
+          class="quick-amount-btn {{saveAmount == 1000 ? 'active' : ''}}" 
+          onTap="setQuickAmount" 
+          data-amount="1000"
+        >1000</view>
+      </view>
+    </view>
+
+    <button 
+      class="save-action-btn {{saveAmount > 0 || saveAmount <=250000 ? 'active' : ''}}" 
+      disabled="{{!saveAmount || saveAmount <= 0 || saveAmount > 250000}}"
+      onTap="handleSave"
+    >
+       SAVE NOW
+    </button>
+  </view>
+
+  <!-- Transactions -->
+  <view class="transactions-section">
+    <text class="section-title">RECENT SAVINGS</text>
+    <view class="transaction-list">
+      <block a:for="{{recentTransactions}}">
+        <view class="transaction-item">
+          <view class="transaction-left">
+            <view class="transaction-icon">
+              <icon class="logo-icon" type="success" size="xx-small" color="#7EA842" />
+            </view>
+            <text class="transaction-amount">+KSH {{item.amount}}</text>
+          </view>
+          <text class="transaction-date">{{item.date}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

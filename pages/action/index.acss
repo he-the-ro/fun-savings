@@ -1,0 +1,95 @@
+.action-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  margin: 20px 0 15px;
+}
+
+.action-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.action-cards-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.action-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.action-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.action-card:active {
+  transform: scale(0.98);
+}
+
+.icon-container {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.save-icon {
+  background: linear-gradient(135deg, #7EA842, #95C158);
+}
+
+.withdraw-icon {
+  background: linear-gradient(135deg, #3498db, #5DADE2);
+}
+
+.draw-icon {
+  background: linear-gradient(135deg, #e74c3c, #EC7063);
+}
+
+.card-title {
+  font-size: 19px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #7f8c8d;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 90%;
+}

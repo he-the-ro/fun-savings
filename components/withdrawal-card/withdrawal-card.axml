@@ -1,0 +1,43 @@
+<view class="withdrawal-card">
+  <!-- Balance Card -->
+  <view class="balance-card">
+    <text class="balance-label">YOUR BALANCE</text>
+    <text class="balance-amount">KSH {{availableBalance}}</text>
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{progress}}%"></view>
+    </view>
+  </view>
+
+  <!-- Withdrawal Method -->
+  <view class="method-card">
+    <text class="section-title">WITHDRAW TO</text>
+    <view class="method-selector">
+      <image src="/images/mpesa-logo.png" class="method-logo" />
+      <text class="method-name">M-Pesa</text>
+      <icon type="right" class="method-arrow" />
+    </view>
+  </view>
+
+  <!-- Amount Selector -->
+  <amount-selector 
+    quickAmounts="{{quickAmounts}}"
+    selectedAmount="{{selectedAmount}}"
+    onAmountChange="handleAmountChange"
+  />
+
+  <!-- Action Button -->
+  <button 
+    class="action-btn {{canWithdraw ? 'active' : 'disabled'}}" 
+    disabled="{{!canWithdraw}}"
+    onTap="handleWithdrawTap"
+  >
+    WITHDRAW NOW
+    <view class="btn-loading" a:if="{{isProcessing}}"></view>
+  </button>
+
+  <!-- Fee Notice -->
+  <view class="fee-notice">
+    <icon type="info" size="xs" color="#7f8c8d" />
+    <text>No withdrawal fees • Processed within 2 minutes</text>
+  </view>
+</view>

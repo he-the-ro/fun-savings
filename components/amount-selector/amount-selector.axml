@@ -1,0 +1,28 @@
+<view class="amount-selector">
+  <text class="section-title">SELECT AMOUNT</text>
+  
+  <!-- Quick Amounts -->
+  <view class="quick-amount-grid">
+    <view 
+      a:for="{{quickAmounts}}"
+      class="amount-pill {{selectedAmount === item ? 'active' : ''}}"
+      onTap="selectAmount"
+      data-amount="{{item}}"
+    >
+      KSH {{item}}
+    </view>
+  </view>
+
+  <!-- Custom Amount -->
+  <view class="custom-amount {{customAmountFocus ? 'focused' : ''}}">
+    <text class="currency-symbol">KSH</text>
+    <input 
+      type="number" 
+      placeholder="Other amount" 
+      value="{{customAmount}}"
+      onInput="handleCustomInput"
+      onFocus="handleFocus"
+      onBlur="handleBlur"
+    />
+  </view>
+</view>
