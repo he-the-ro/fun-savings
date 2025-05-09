@@ -1,0 +1,81 @@
+<view class="earn-page">
+  <!-- Balance Summary -->
+  <view class="balance-card">
+    <text class="balance-label">Earnings Balance</text>
+    <text class="balance-amount">KSH {{earningsBalance}}</text>
+  </view>
+
+  <!-- Earn Opportunities Section -->
+  <view class="section">
+    <text class="section-title">Enter a Draw</text>
+    <view class="opportunities-grid">
+      <view
+        class="opportunity-card {{activeDraws.includes('scratch') ? 'active' : ''}}"
+        data-id="scratch"
+        onTap="confirmEntry"
+      >
+        <text class="opportunity-name">Scratch & Win</text>
+        <text class="opportunity-reward">Win up to KSH 500</text>
+      </view>
+
+      <view
+        class="opportunity-card {{activeDraws.includes('spin') ? 'active' : ''}}"
+        data-id="spin"
+        onTap="confirmEntry"
+      >
+        <text class="opportunity-name">Spin Wheel</text>
+        <text class="opportunity-reward">Win up to KSH 1,000</text>
+      </view>
+
+      <view
+        class="opportunity-card {{activeDraws.includes('quiz') ? 'active' : ''}}"
+        data-id="quiz"
+        onTap="confirmEntry"
+      >
+        <text class="opportunity-name">Daily Quiz</text>
+        <text class="opportunity-reward">Win KSH 50-200</text>
+      </view>
+
+      <view
+        class="opportunity-card {{activeDraws.includes('dip') ? 'active' : ''}}"
+        data-id="dip"
+        onTap="confirmEntry"
+      >
+        <text class="opportunity-name">Lucky Dip</text>
+        <text class="opportunity-reward">Win KSH 10-100</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- Earnings History -->
+  <view class="section">
+    <view class="section-header">
+      <text class="section-title">Earnings History</text>
+      <text class="see-all" onTap="viewFullHistory">See All</text>
+    </view>
+
+    <view class="history-list">
+      <block a:for="{{recentEarnings}}" a:for-item="item">
+        <view class="history-item">
+          <image src="/images/success-icon.png" class="status-icon" />
+          <view class="item-details">
+            <text class="item-name">{{item.activity}}</text>
+            <text class="item-date">{{item.date}}</text>
+          </view>
+          <text class="item-amount">+KSH {{item.amount}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- Entry Confirmation Modal -->
+  <view a:if="{{showEntryConfirm}}" class="entry-confirm-modal">
+    <view class="modal-content">
+      <text>Enter {{selectedDrawName}}?</text>
+      <view class="modal-actions">
+        <button onTap="cancelEntry">Cancel</button>
+        <button class="confirm-btn" onTap="acceptEntry">Enter</button>
+      </view>
+    </view>
+  </view>
+</view>

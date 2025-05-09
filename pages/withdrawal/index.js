@@ -81,12 +81,9 @@ Page({
   processWithdrawal() {
     this.setData({ isProcessing: true });
     
-    // Simulate API call
     setTimeout(() => {
-      // Generate random transaction ID
       const transactionId = Math.floor(100000 + Math.random() * 900000);
       
-      // Get current time
       const now = new Date();
       const hours = now.getHours().toString().padStart(2, '0');
       const minutes = now.getMinutes().toString().padStart(2, '0');

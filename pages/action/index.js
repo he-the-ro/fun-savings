@@ -7,5 +7,8 @@ Page({
   },
   navigateToDraw() {
     my.navigateTo({ url: '/pages/draw/index' });
+  },
+  navigateToDraw() {
+    my.navigateTo({ url: '/pages/earn/index' });
   }
 });

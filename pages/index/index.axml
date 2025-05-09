@@ -2,7 +2,7 @@
   <view class="welcome-content">
     <image class="welcome-logo" src="/assets/images/logo.png" />
     <text class="welcome-title">Welcome to Fun Savings!</text>
-    <text class="welcome-subtitle">Game your way to financial freedom</text>
+    <text class="welcome-subtitle">Draw your way to financial freedom</text>
     
     <view class="features-container">
       <view class="feature-item">
@@ -11,7 +11,7 @@
       </view>
       <view class="feature-item">
         <image class="feature-icon" src="/images/coin-icon.png" />
-        <text class="feature-text">Earn Rewards Through Gaming</text>
+        <text class="feature-text">Earn Rewards Through Draws</text>
       </view>
       <view class="feature-item">
         <image class="feature-icon" src="/images/graph-icon.png" />

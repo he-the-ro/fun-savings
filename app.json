@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/action/index",
     "pages/save/index",
-    "pages/withdrawal/index"
+    "pages/withdrawal/index",
+    "pages/earn/index"
   ],
   "window": {
     "defaultTitle": "Fun Savings"
